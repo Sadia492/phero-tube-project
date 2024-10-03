@@ -4,8 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
+    <header class="">
+      <nav
+        class="flex flex-col lg:flex-row w-11/12 mx-auto justify-between items-center border-b-2 border-black py-2"
+      >
+        <div>
+          <img src="images/Logo.png" alt="" />
+        </div>
+        <div>
+          <input
+            id="search-box"
+            class="min-w-56 h-10 rounded-lg border-2 border-black"
+            placeholder="Search here"
+            type="text"
+          />
+          <input class="btn btn-error py-1" type="submit" value="Search" />
+        </div>
+        <div>
+          <button id="sort-btn" class="btn btn-error">Sort</button>
+        </div>
+      </nav>
+    </header>
+    <nav id="category-section" class="flex justify-center gap-5 mt-2"></nav>
+
+    <main>
+      <section
+        id="video-section"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-11/12 mx-auto mt-8"
+      ></section>
+    </main>
+    <!-- Open the modal using ID.showModal() method -->
+    <button
+      id="showModalData"
+      class="btn hidden"
+      onclick="customModal.showModal()"
+    >
+      open modal
+    </button>
+    <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="modal-content"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
     <script src="js/script.js"></script>
   </body>
 </html>
