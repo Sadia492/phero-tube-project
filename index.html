@@ -26,7 +26,13 @@
             placeholder="Search here"
             type="text"
           />
-          <input class="btn btn-error py-1" type="submit" value="Search" />
+          <button
+            onclick="showSearch()"
+            id="search-btn"
+            class="btn btn-error py-1"
+          >
+            Search
+          </button>
         </div>
         <div>
           <button id="sort-btn" class="btn btn-error">Sort</button>
@@ -40,9 +46,16 @@
         id="video-section"
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-11/12 mx-auto mt-8"
       ></section>
+      <section id="no-video" class="hidden">
+        <div class="flex flex-col gap-5 justify-center items-center">
+          <img class="w-1/4 object-cover" src="images/Icon.png" />
+          <h2 class="text-2xl font-bold">NO CONTENT HERE</h2>
+        </div>
+      </section>
     </main>
     <!-- Open the modal using ID.showModal() method -->
-    <button
+    <div id="modal-container"></div>
+    <!-- <button
       id="showModalData"
       class="btn hidden"
       onclick="customModal.showModal()"
@@ -54,12 +67,12 @@
         <div id="modal-content"></div>
         <div class="modal-action">
           <form method="dialog">
-            <!-- if there is a button in form, it will close the modal -->
+         
             <button class="btn">Close</button>
           </form>
         </div>
       </div>
-    </dialog>
+    </dialog> -->
 
     <script src="js/extra.js"></script>
   </body>
